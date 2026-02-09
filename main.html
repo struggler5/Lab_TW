@@ -2,65 +2,98 @@
 <html>
     <head>
 <style>
+*{
+    font-family:hack;
+}
 body {
   margin: 0;
   padding: 0;
+  background-color:  #293D4A;
+}
+h1{
+    border-style:hidden hidden solid hidden;
+    border-color:white;
+    margin:0  ;
+    text-align:center;
+    background-color:grey;
+}
+table {
+  border-collapse: collapse;
+  width: 75%;
+  margin-top:5%;
+  margin-left: 20%;
+  margin-right:5%;
 }
 
-h2, p {
-  margin: 10px;
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th{
+    background-color:grey;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
   margin: 0;
+border-style:hidden solid solid hidden;
+    border-color:white;
   padding: 0;
-  overflow: hidden;
-  background-color: #333333;
+  width: 15%;
+  background-color: grey;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
 }
 
-ul li {
-  float: left;
-}
 
-ul li a {
+li a {
   display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+  font-size: 153%;
+  color: black;
+  padding: 2%;
   text-decoration: none;
 }
 
-ul li a:hover {
-  background-color: #111111;
+/* Change the link and background color on hover */
+li a:hover {
+  background-color: #555555;
+  color: white;
 }
 </style>
     </head>
 <body>
+<h1>Management Sys</h1>
+<ul id="nav">
 
-<h1>Accounting helper</h1>
-<ul>
-
-  <li><a href="Home Pannel">About</a></li>
-  <li><a href="Products">Home</a></li>
-  <li><a href="Sales">Contact</a></li>
-  <li><a href="Restock">Contact</a></li>
+  <li><a href="#">DB</a></li>
+  <li><a href="#">Transactions</a></li>
+  <li><a href="#">Warehouse</a></li>
 </ul>
 
-
-<div>
-    <h2>Latest Sales</h2>
-
-</div>
-
-<div>
-    <h2>Latest Restock</h2>
-
-</div>
-
-<div>
-    <h2>Company Email</h2>
-
-</div>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Product</th>
+    <th>Ammount</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+  </tr>
+  <tr>
+    <td>143</td>
+    <td>Book 3</td>
+    <td>2</td>
+    <td>50 $</td>
+  </tr>
+  <tr>
+    <td>144</td>
+    <td>Book 6</td>
+    <td>1</td>
+    <td>30 $</td>
+  </tr>
+</table>
 </body>
 </html> 
