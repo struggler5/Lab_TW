@@ -1,4 +1,5 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html>
     <head>
 <style>
@@ -17,9 +18,15 @@ h1{
     text-align:center;
     background-color:grey;
 }
+.container{
+    margin-right:5%;
+    margin-left:20%;
+  width: 75%;
+  margin-top:5%;
+}
 table {
   border-collapse: collapse;
-  width: 75%;
+  width: 80%;
   margin-top:5%;
   margin-left: 20%;
   margin-right:5%;
@@ -65,35 +72,34 @@ li a:hover {
 </style>
     </head>
 <body>
-<h1>Management Sys</h1>
+<h1>CRM</h1>
 <ul id="nav">
 
-  <li><a href="#">DB</a></li>
-  <li><a href="#">Transactions</a></li>
-  <li><a href="#">Warehouse</a></li>
+  <li><a style="color: white; "href="{{ url_for('DB') }}">DB</a></li>
+    <li><a href="{{ url_for('Transactions') }}">Transactions</a></li>
+  <li><a href="{{ url_for('Stock') }}">Stock</a></li>
 </ul>
 
-<table>
+<div class="container">
+     <button type="button">Add</button>
+     <button type="button">Deleate</button>
+   <table>
   <tr>
     <th>Id</th>
-    <th>Product</th>
-    <th>Ammount</th>
-    <th>Price</th>
+    <th>Item</th>
+    <th>Date added</th>
   </tr>
-  <tr>
+  <tr >
+    <td> 43</td>
+    <td><a href="{{ url_for('DB_item') }}">Book 3</a></td>
+    <td>25-02-2026</td>
   </tr>
-  <tr>
-    <td>143</td>
-    <td>Book 3</td>
-    <td>2</td>
-    <td>50 $</td>
-  </tr>
-  <tr>
-    <td>144</td>
+  <tr >
+    <td>44</td>
     <td>Book 6</td>
-    <td>1</td>
-    <td>30 $</td>
+    <td>22-02-2025</td>
   </tr>
 </table>
+</div>
 </body>
 </html> 

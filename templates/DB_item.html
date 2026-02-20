@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+*{
+    font-family:hack;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color:  #293D4A;
+}
+h1{
+    border-style:hidden hidden solid hidden;
+    border-color:white;
+    margin:0  ;
+    text-align:center;
+    background-color:grey;
+}
+.container{
+    margin-right:5%;
+    margin-left:20%;
+  width: 75%;
+  margin-top:5%;
+}
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin-top:5%;
+  margin-left: 20%;
+  margin-right:5%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th{
+    background-color:grey;
+}
+
+ul {
+    list-style-type: none;
+  margin: 0;
+border-style:hidden solid solid hidden;
+    border-color:white;
+  padding: 0;
+  width: 15%;
+  background-color: grey;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+
+li a {
+  display: block;
+  font-size: 153%;
+  color: black;
+  padding: 2%;
+  text-decoration: none;
+}
+
+/* Change the link and background color on hover */
+li a:hover {
+  background-color: #555555;
+  color: white;
+}
+</style>
+    </head>
+<body>
+<h1>CRM</h1>
+<ul id="nav">
+
+  <li><a style="color: white; "href="{{ url_for('DB') }}">DB</a></li>
+    <li><a href="{{ url_for('Transactions') }}">Transactions</a></li>
+  <li><a href="{{ url_for('Stock') }}">Stock</a></li>
+</ul>
+
+
+
+<div class="container">
+
+     <button type="button"> Back </button>
+     <table> 
+    <tr>
+        <td rowspan=5><img src="{{  url_for('static', filename='book3.jpg') }}" alt="Mike" height="240px" width="250px"></td>
+        <td>id: 43</td>
+    </tr>
+
+    <tr>
+        <td>name: Book 3</td>
+    </tr>
+
+    <tr>
+        <td rowspan=2>Description: Thie is a very interesting and exciting book</td>
+    </tr>
+    <tr></tr>
+    <tr>
+        <td>Date: 25-02-2026</td>
+    </tr>
+     </table>    
+     <button type="button">Edit</button>
+     <button type="button">Deleate</button>
+</div>
+</body>
+</html> 
