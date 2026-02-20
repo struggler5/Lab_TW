@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -80,25 +81,30 @@ li a:hover {
   <li><a href="{{ url_for('Stock') }}">Stock</a></li>
 </ul>
 
+
+
 <div class="container">
- <input type="text" placeholder="Search..">
-   <table>
-  <tr>
-    <th>Id</th>
-    <th>Item</th>
-    <th>Ammount</th>
-  </tr>
-  <tr >
-    <td> 43</td>
-    <td><a href="{{ url_for('Stock_item') }}">Book 3</a></td>
-    <td>4</td>
-  </tr>
-  <tr >
-    <td>44</td>
-    <td>Book 6</td>
-    <td>7</td>
-  </tr>
-</table>
+
+     <button type="button"> Back </button>
+     <table> 
+    <tr>
+        <td rowspan=5><img src="{{  url_for('static', filename='book3.jpg') }}" alt="Mike" height="240px" width="250px"></td>
+        <td>id: 43</td>
+    </tr>
+
+    <tr>
+        <td>name: Book 3</td>
+    </tr>
+
+    <tr>
+        <td rowspan=2>Description: Thie is a very interesting and exciting book</td>
+    </tr>
+    <tr></tr>
+    <tr>
+        <td>Date: 25-02-2026</td>
+    </tr>
+     </table>    
+     <button type="button">Restock</button>
 </div>
 </body>
 </html> 

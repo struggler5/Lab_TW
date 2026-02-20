@@ -18,4 +18,8 @@ def DB_item():
 @app.route('/Stock')
 def Stock():
     return render_template("Stock.html")
+
+@app.route('/Stock/item')
+def Stock_item():
+    return render_template("Stock_item.html")
 app.run(debug=True, host="0.0.0.0", port=5000)
