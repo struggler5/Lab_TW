@@ -1,88 +1,7 @@
 
+{% extends 'base.html'%}
 
-<!DOCTYPE html>
-<html>
-    <head>
-<style>
-*{
-    font-family:hack;
-}
-body {
-  margin: 0;
-  padding: 0;
-  background-color:  #293D4A;
-}
-h1{
-    border-style:hidden hidden solid hidden;
-    border-color:white;
-    margin:0  ;
-    text-align:center;
-    background-color:grey;
-}
-.container{
-    margin-right:5%;
-    margin-left:20%;
-  width: 75%;
-  margin-top:5%;
-}
-table {
-  border-collapse: collapse;
-  width: 80%;
-  margin-top:5%;
-  margin-left: 20%;
-  margin-right:5%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-th{
-    background-color:grey;
-}
-
-ul {
-    list-style-type: none;
-  margin: 0;
-border-style:hidden solid solid hidden;
-    border-color:white;
-  padding: 0;
-  width: 15%;
-  background-color: grey;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-}
-
-
-li a {
-  display: block;
-  font-size: 153%;
-  color: black;
-  padding: 2%;
-  text-decoration: none;
-}
-
-/* Change the link and background color on hover */
-li a:hover {
-  background-color: #555555;
-  color: white;
-}
-</style>
-    </head>
-<body>
-<h1>CRM</h1>
-<ul id="nav">
-
-  <li><a style="color: white; "href="{{ url_for('DB') }}">DB</a></li>
-    <li><a href="{{ url_for('Transactions') }}">Transactions</a></li>
-  <li><a href="{{ url_for('Stock') }}">Stock</a></li>
-</ul>
-
-
-
+{% block head %}
 <div class="container">
 
      <button type="button"> Back </button>
@@ -106,5 +25,4 @@ li a:hover {
      </table>    
      <button type="button">Restock</button>
 </div>
-</body>
-</html> 
+{% endblock%}
