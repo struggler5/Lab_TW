@@ -340,3 +340,14 @@ width: 100%;
 box-sizing: border-box;
 outline: none;
  }
+a {
+  text-decoration: none; /* Removes the underline */
+  color: var(--accent-hover); /* Uses your professional blue */
+  transition: color 0.2s ease; /* Makes the hover effect smooth */
+}
+
+/* Optional: Add the underline back only when hovering */
+a:hover {
+  text-decoration: none; 
+  color: #82b1ff; /* A slightly lighter blue on hover */
+}
