@@ -22,4 +22,9 @@ def Stock():
 @app.route('/Stock/item')
 def Stock_item():
     return render_template("Stock_item.html")
+
+
+@app.route('/LogIn')
+def LogIn():
+    return render_template("login.html")
 app.run(debug=True, host="0.0.0.0", port=5000)
