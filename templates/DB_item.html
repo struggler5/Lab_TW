@@ -3,7 +3,7 @@
 
 {% block head %}
 
-     <button   class="btn"> Back </button>
+<a class="nav-item"href="{{ url_for('DB') }}"><button   class="btn"> Back </button></a>
      <table> 
     <tr>
         <td rowspan=5><img src="{{  url_for('static', filename='book3.jpg') }}" alt="Mike" height="240px" width="250px"></td>
@@ -23,6 +23,6 @@
     </tr>
      </table>    
      <button  >Edit</button>
-     <button  >Deleate</button>
+     <button onclick="OnDeleate()">Deleate</button>
 
 {% endblock %}
