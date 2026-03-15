@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+{% load static %}
+<html>
+    <head>
+<link rel="stylesheet" href="{% static 'style.css' %}">
+<script href="{% static 'js/script.js'%}"></script>
+    </head>
+<body>
+<h1>CRM</h1>
+ <nav class="sidebar">
+  <div class="sidebar-header">CRM</div>
+  <div class="nav-group">
+<a class="nav-item"href="{% url 'DB' %}">DB</a>
+<a class="nav-item"href="{% url 'Transactions'%}">Transactions</a>
+<a class="nav-item"href="{% url 'Stock'%}">Stock</a>
+  </div>
+  <div class="sidebar-footer">
+    <div class="user-profile">
+      <div class="user-avatar"></div>
+      <span><a class="nav-item"href="{%url 'LogIn' %}">Log In</a></span>
+    </div>
+  </div>
+</nav>
+<ul id="nav">
+
+  <li></li>
+    <li></li>
+  <li></li>
+</ul>
+<div class="container">
+{% block head %}
+
+{% endblock %}
+
+</div>
+
+
+
+</body>
+</html> 

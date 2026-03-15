@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block head %}
+     <button class="btn"onclick="Construction()" type="button">Add</button>
+
+ <input type="text" placeholder="Search..">
+   <table>
+  <tr>
+    <th>Id</th>
+    <th>Item</th>
+    <th>Date added</th>
+  </tr>
+  <tr >
+    <td> 43</td>
+    <td><a href="{% url 'DB_item'%}">Book 3</a></td>
+    <td>25-02-2026</td>
+  </tr>
+  <tr >
+    <td>44</td>
+    <td>Book 6</td>
+    <td>22-02-2025</td>
+  </tr>
+</table>
+
+{% endblock %}

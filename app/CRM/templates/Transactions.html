@@ -1,0 +1,32 @@
+
+{% extends 'base.html'%}
+
+{% block head %}
+ <input type="text" placeholder="Search..">
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Product</th>
+    <th>Ammount</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+  </tr>
+  <tr style="color:green">
+    <td>143</td>
+    <td>Book 3</td>
+    <td>2</td>
+    <td>+ 50 $</td>
+  </tr>
+  <tr style="color:red">
+    <td>144</td>
+    <td>Book 6</td>
+    <td>1</td>
+    <td>- 30 $</td>
+  </tr>
+</table>
+
+<script>
+window.onload = Construction();
+</script>
+{% endblock %}

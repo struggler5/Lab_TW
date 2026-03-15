@@ -1,0 +1,26 @@
+
+{% extends 'base.html'%}
+
+{% block head %}
+
+     <button class="btn" type="button"> Back </button>
+     <table> 
+    <tr>
+        <td rowspan=5><img src="{{  url_for('static', filename='book3.jpg') }}" alt="Mike" height="240px" width="250px"></td>
+        <td>id: 43</td>
+    </tr>
+
+    <tr>
+        <td>name: Book 3</td>
+    </tr>
+
+    <tr>
+        <td rowspan=2>Description: Thie is a very interesting and exciting book</td>
+    </tr>
+    <tr></tr>
+    <tr>
+        <td>In stock:4</td>
+    </tr>
+     </table>    
+     <button class="btn" type="button">Restock</button>
+{% endblock%}
