@@ -8,7 +8,7 @@ import uuid
 
 class User(AbstractUser):
     Name = models.CharField(max_length=200)
-    Budget = models.FloatField()
+    Budget = models.FloatField(blank=True, null=True)
 
 class Stock_item(models.Model):
     owner = models.ForeignKey(

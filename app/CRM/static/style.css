@@ -318,17 +318,20 @@ main.content-area {
 
 .login-card input {
     max-width: 100%; /* Overrides the 450px limit for the card */
+  margin-left: 0 !important;
 }
 
 .login-card button {
     width: 100%;
     margin-top: 10px;
     padding: 12px;
+  margin-left: 0 !important;
 }
-
+/* Fix alignment for login form */
 .login-footer {
     margin-top: 24px;
     font-size: 0.9rem;
+  margin-left: 0 !important;
 }
  #password, #email{
 background-color: var(--surface-color);
