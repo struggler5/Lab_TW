@@ -24,6 +24,9 @@ class Stock_item(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     img = models.ImageField(upload_to='items_img/',blank=True, null=True)
 
+    def __str__(self):
+        return f"{self.Name} {self.in_stock}"
+
 
 
 class Transaction(models.Model):
@@ -39,8 +42,7 @@ class Transaction(models.Model):
     item = models.ForeignKey('Stock_item', on_delete=models.PROTECT)
     
     quantity = models.PositiveIntegerField()
-    price_per_item = models.DecimalField(max_digits=10, decimal_places=2, editable=True)
-    total = models.DecimalField(max_digits=10, decimal_places=2, editable=False)
     timestamp = models.DateTimeField(auto_now_add=True)
     buy = models.BooleanField(null=True, blank=True)
-
+    def __str__(self):
+        return f"{self.item}   {self.timestamp} "

@@ -3,7 +3,7 @@
 <html>
     <head>
 <link rel="stylesheet" href="{% static 'style.css' %}">
-<script href="{% static 'js/script.js'%}"></script>
+<script src="{% static 'js/script.js'%}"></script>
     </head>
 <body>
 <h1>CRM</h1>
@@ -17,9 +17,22 @@
   <div class="sidebar-footer">
     <div class="user-profile">
       <div class="user-avatar"></div>
+      {% if user.is_authenticated %}
+  
+  <form action="{% url 'LogOut' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">LogOut</button>
+  </form>
+{% else %}
       <span><a class="nav-item"href="{%url 'LogIn' %}">Log In</a></span>
+{% endif %}
     </div>
   </div>
+{% if user.is_staff %}
+    <a href="{% url 'admin:index' %}" class="style-as-button">
+        Admin Dashboard
+    </a>
+{% endif %}
 </nav>
 <ul id="nav">
 
